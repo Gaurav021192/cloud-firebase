@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-canvas">
+    <div id="login_div" class="main-div">
+      <h2 class="login-margin">Cloud Canvas Login</h2>
+      <input type="email" placeholder="Email" id="email_field" />
+      <input type="password" placeholder="********" id="password_field" />
+  
+      <button onclick="login()">Login to Account</button>
+    </div>
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <div class="other-div"></div>
+  </div>  
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDqr8ldsQD07gn1d7m6DYJtvwmelxH8rmk",
+      authDomain: "cloud-canvas-run.firebaseapp.com",
+      databaseURL: "https://cloud-canvas-run.firebaseio.com",
+      projectId: "cloud-canvas-run",
+      storageBucket: "",
+      messagingSenderId: "69590405052",
+      appId: "1:69590405052:web:137068a81c8d86b25265b9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
